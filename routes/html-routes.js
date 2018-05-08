@@ -12,9 +12,9 @@ module.exports = function(app) {
 
   // Each of the below routes just handles the HTML page that the user gets sent to.
 
-  // index route loads test.html
+  // index route loads the landing page
   app.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/test.html"));
+    res.sendFile(path.join(__dirname, "../public/landing.html"));
   });
 
 
