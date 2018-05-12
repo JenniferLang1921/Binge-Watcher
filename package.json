@@ -10,9 +10,13 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "animejs": "^2.2.0",
     "body-parser": "^1.18.2",
     "express": "^4.16.3",
     "mysql2": "^1.5.3",
     "sequelize": "^4.37.7"
+  },
+  "devDependencies": {
+    "scroll-js": "^1.8.8"
   }
 }

@@ -101,3 +101,10 @@ function render(ID) {
 $('#myModal').on('hidden.bs.modal', function() {
   $(this).removeData('bs.modal');
 });
+
+
+var scroll = new Scroll(document.body);
+scroll.to(0, 1200).then(function () {
+   //scrolling down 500 pixels has completed!
+});
+ 
