@@ -12,6 +12,8 @@
 body {
   background: #fafafa;
   padding-bottom: 5em;
+  overflow: hidden;
+  height: 1200px;
 }
 
 ul {
