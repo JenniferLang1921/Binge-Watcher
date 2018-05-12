@@ -1,21 +1,21 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <title>TMDb: Handlebars.js w/ multiple helpers</title>
+	<meta charset="UTF-8">
+	<title>TMDb: Handlebars.js w/ multiple helpers</title>
 
 
-  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+	<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
 
-      <link rel="stylesheet" href="css/view.css">
+	<link rel="stylesheet" href="css/view.css">
 
 
 </head>
 
 <body>
 
-  <!--   Messy (I know), but works as intended! (would like to put more items in vaiables to make tempaltes cleaner)..
+	<!--   Messy (I know), but works as intended! (would like to put more items in vaiables to make tempaltes cleaner)..
 	Starts with a getJSON of the TMDb ID for the movie 'Deadpool'.  You can see the entire json in the lower part of the CSS window.  I wanted to pull the basic movie information along with the trailers and Cast.
 	The cast has more members then I wanted to show so I used a custom Handlebars Helper to limit the number shown, same goes for the Trailers.
 	Looping of an array (genres) along with a sub-array Credits/Cast & Videos/Results that both use the limit helper.
@@ -25,15 +25,15 @@
 again, not pretty but functional.
 -->
 
-<div class="container-fluid">
-	<div class="row">
-		<div id="main" class="col-xs-12">
+	<div class="container-fluid">
+		<div class="row">
+			<div id="main" class="col-xs-12">
 
+			</div>
 		</div>
 	</div>
-</div>
 
-<script id="simple-template" type="text/x-handlebars-template">
+	<script id="simple-template" type="text/x-handlebars-template">
 	<div class="col-xs-12">
 		<div class="title">
 			{{title}}
@@ -120,7 +120,7 @@ Trailer(s):
 {{/credits}}
 </script>
 
-<script id="bioTemplate" type="text/x-handlebars-template">
+	<script id="bioTemplate" type="text/x-handlebars-template">
 	<h4 class="modal-title">{{name}} | <small> aka: {{also_known_as}} </small></h4>
 </div>
 <div class="modal-body">
@@ -154,34 +154,105 @@ Trailer(s):
 
 </script>
 
-    <!-- Event Modal -->
-<div id="myModal" class="modal fade">
-    <div class="modal-dialog">
-        <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-									<!-- Title and opening body tag are in Handlebars 's2Template' -->
-                  <!-- cast profile loaded here -->
-                  <div id="castBio"></div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                </div>
+	<!-- Event Modal -->
+	<div id="myModal" class="modal fade">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<!-- Title and opening body tag are in Handlebars 's2Template' -->
+					<!-- cast profile loaded here -->
+					<div id="castBio"></div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
 
-        </div>
-        <!-- /.modal-content -->
-    </div>
-    <!-- /.modal-dialog -->
-</div>
-<!-- Event modal -->
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
-<script src='https://momentjs.com/downloads/moment.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js'></script>
+			</div>
+			<!-- /.modal-content -->
+		</div>
+		<!-- /.modal-dialog -->
+	</div>
+
+	<!--Comment Form-->
 
 
+	<div class="container">
+		
 
-    <script  src="js/view.js"></script>
+		<!--star rating form-->
+
+		<div class="row">
+
+			<fieldset class="rating">
+				<h3>Did you like it?</h3>
+				<input type="radio" id="star5" name="rating" value="5" />
+				<label for="star5" title="Rocks!">5 stars</label>
+				<input type="radio" id="star4" name="rating" value="4" />
+				<label for="star4" title="Pretty good">4 stars</label>
+				<input type="radio" id="star3" name="rating" value="3" />
+				<label for="star3" title="Meh">3 stars</label>
+				<input type="radio" id="star2" name="rating" value="2" />
+				<label for="star2" title="Kinda bad">2 stars</label>
+				<input type="radio" id="star1" name="rating" value="1" />
+				<label for="star1" title="Sucks big time">1 star</label>
+			</fieldset>
+		</div>
+
+		<!--movie review comments input-->
+		<div class="row comments">
+			<div class="form-group ">
+				<label class="control-label " for="textarea">
+					<h3>Leave a Review for This Show!</h3>
+				</label>
+				<textarea class="form-control" cols="40" id="textarea" name="textarea" rows="10"></textarea>
+			</div>
+		</div>
+
+		<div class="row">
+
+			<form method="post">
+				<div class="form-group ">
+					<label class="control-label " for="name">
+						<h3>Your Name</h3>
+					</label>
+					<input class="form-control" id="name" name="name" type="text" />
+				</div>
+			</form>
+
+		</div>
+
+		<!--submit button-->
+
+		<div class="form-group">
+			<button class="btn btn-primary " name="submit" type="submit">
+				Submit
+			</button>
+		</div>
+	 
+		
+		<!--empty div to hold user reviews-->
+		<div class="row" id="pastReviews">
+
+		</div>
+
+	</div>
+
+
+
+
+
+
+
+	<!-- Event modal -->
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+	<script src='https://momentjs.com/downloads/moment.js'></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js'></script>
+
+
+
+	<script src="js/view.js"></script>
 
 
 
