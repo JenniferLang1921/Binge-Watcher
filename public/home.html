@@ -22,13 +22,17 @@
         <div class="nav_section">
           <ul class="flex">
             <li class="logo flex">BW</li>
-            <li class="flex"><a href="landing.html">Home</a></li>
+            <li class="flex">
+              <a href="landing.html">Home</a>
+            </li>
           </ul>
         </div>
         <div class="nav_user">
           <ul class="flex">
             <li class="flex">Welcome: homer</li>
-            <li class="flex"><a href="/login">Log out 👋</a></li>
+            <li class="flex">
+              <a href="/login">Log out 👋</a>
+            </li>
           </ul>
         </div>
       </nav>
@@ -36,26 +40,74 @@
     <aside class="aside">
       <h3>🏠 Dashboard</h3>
       <ul>
-        <li><span>🎬 Movies</span>
+        <li>
+          <span class="title">🎬 Movies</span>
           <ul>
-            <li><a class="active" href="#">Search</a></li>
-            <li><a href="#">Add</a></li>
-            <li><a href="#">Edit</a></li>
-            <li><a href="view.html">Go Deadpool</a></li>
+            <li>
+              <a class="active" href="#">Search</a>
+            </li>
+            <li>
+              <a href="#">Add</a>
+            </li>
+            <li>
+              <a href="#">Edit</a>
+            </li>
+            <li>
+              <a href="view.html">Go Deadpool</a>
+            </li>
           </ul>
         </li>
-        <li><span>🙋 Member</span>
+        <li>
+          <span class="title">🙋 Member</span>
           <ul>
-            <li><a href="#">Search</a></li>
-            <li><a href="#">Favorites</a></li>
-            <li><a href="#">Update</a></li>
+            <li>
+              <a href="#">Search</a>
+            </li>
+
+
+            <!-- The overlay -->
+            <div id="myNav" class="overlay">
+
+              <!-- Button to close the overlay navigation -->
+              <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+              <!-- Overlay content -->
+              <div>
+                <h1 class="text">Favorites</h1>
+
+              </div>
+
+            </div>
+
+            <!-- Use any element to open/show the overlay navigation menu -->
+            <li>
+              <a href="#">
+              <span onmouseover="openNav()">Favorites</span>
+              </a>
+            </li>
+
+
+
+
+
+
+            <li>
+              <a href="#">Update</a>
+            </li>
           </ul>
         </li>
-        <li><span>🤘 Streaming Services</span>
+        <li>
+          <span class="title">🤘 Streaming Services</span>
           <ul>
-            <li><a href="#">Netflix</a></li>
-            <li><a href="#">Hulu</a></li>
-            <li><a href="#">Amazon Prime</a></li>
+            <li>
+              <a href="#">Netflix</a>
+            </li>
+            <li>
+              <a href="#">Hulu</a>
+            </li>
+            <li>
+              <a href="#">Amazon Prime</a>
+            </li>
           </ul>
         </li>
       </ul>
@@ -75,7 +127,9 @@
         </div>
         <div class="card_details">
           <h4>Card 1</h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mattis dui ligula, at porttitor nunc consectetur dapibus. Donec turpis ante, feugiat lobortis fermentum sit amet, tincidunt in massa. Proin dapibus hendrerit commodo.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mattis dui ligula, at porttitor nunc consectetur
+            dapibus. Donec turpis ante, feugiat lobortis fermentum sit amet, tincidunt in massa. Proin dapibus hendrerit
+            commodo.</p>
         </div>
       </div>
       <div class="card">
@@ -84,7 +138,9 @@
         </div>
         <div class="card_details">
           <h4>Card 2</h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mattis dui ligula, at porttitor nunc consectetur dapibus. Donec turpis ante, feugiat lobortis fermentum sit amet, tincidunt in massa. Proin dapibus hendrerit commodo. </p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mattis dui ligula, at porttitor nunc consectetur
+            dapibus. Donec turpis ante, feugiat lobortis fermentum sit amet, tincidunt in massa. Proin dapibus hendrerit
+            commodo. </p>
         </div>
       </div>
       <div class="card">
@@ -93,7 +149,9 @@
         </div>
         <div class="card_details">
           <h4>Card 3</h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mattis dui ligula, at porttitor nunc consectetur dapibus. Donec turpis ante, feugiat lobortis fermentum sit amet, tincidunt in massa. Proin dapibus hendrerit commodo.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mattis dui ligula, at porttitor nunc consectetur
+            dapibus. Donec turpis ante, feugiat lobortis fermentum sit amet, tincidunt in massa. Proin dapibus hendrerit
+            commodo.</p>
         </div>
       </div>
       <div class="card">
@@ -102,14 +160,16 @@
         </div>
         <div class="card_details">
           <h4>Card 4</h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mattis dui ligula, at porttitor nunc consectetur dapibus. Donec turpis ante, feugiat lobortis fermentum sit amet, tincidunt in massa. Proin dapibus hendrerit commodo.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mattis dui ligula, at porttitor nunc consectetur
+            dapibus. Donec turpis ante, feugiat lobortis fermentum sit amet, tincidunt in massa. Proin dapibus hendrerit
+            commodo.</p>
         </div>
       </div>
     </div>
   </div>
 
 
-
+  <script src="js/home.js"></script>
 </body>
 
 </html>

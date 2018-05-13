@@ -8,11 +8,7 @@
 
 	<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
 
-<<<<<<< HEAD
 	<link rel="stylesheet" href="css/view.css">
-=======
-  <link rel="stylesheet" href="css/view.css">
->>>>>>> fe268c3dc71a404d5b37bb41b2c562abe2dbdf3a
 
 
 </head>
@@ -29,7 +25,6 @@
 again, not pretty but functional.
 -->
 
-<<<<<<< HEAD
 	<div class="container-fluid">
 		<div class="row">
 			<div id="main" class="col-xs-12">
@@ -61,38 +56,6 @@ again, not pretty but functional.
 		<div class="col-xs-12 text-center">
 			{{#each genres}}
 				<span class="label label-default" style="margin-right: .5em;">
-=======
-  <div class="container-fluid">
-    <div class="row">
-      <div id="main" class="col-xs-12">
-
-      </div>
-    </div>
-  </div>
-
-  <script id="simple-template" type="text/x-handlebars-template">
-    <div class="col-xs-12">
-      <div class="title">
-        {{title}}
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-xs-4">
-        Poster: <br>
-        <img id="mainPoster" src="http://image.tmdb.org/t/p/w342{{poster_path}}">
-      </div>
-      <div class="col-xs-8">
-        <div class="pull-right">
-          Backdrop: <br>
-          <img id="backdrop" src="http://image.tmdb.org/t/p/w342{{backdrop_path}}" </div>
-        </div>
-
-        <div class="row">
-          <div class="col-xs-12 text-center">
-            {{#each genres}}
-            <span class="label label-default" style="margin-right: .5em;">
->>>>>>> fe268c3dc71a404d5b37bb41b2c562abe2dbdf3a
 					{{name}}
 				</span> {{/each}}
           </div>
@@ -121,7 +84,6 @@ again, not pretty but functional.
         <span class='embed-responsive embed-responsive-16by9'>
 			<iframe class='embed-responsive-item' src="https://www.youtube.com/embed/{{key}}"?html5=1&iv_load_policy=3' frameborder='0'></iframe>
 		</span>
-<<<<<<< HEAD
 	</div>
 	{{/each_upto}}
 	</div>
@@ -172,50 +134,6 @@ again, not pretty but functional.
 	{{#each_upto cast 30}}
 	<div class="col-xs-3">
   	<span> Released: {{formatDate release_date "short"}}
-=======
-      </div>
-      {{/each_upto}}
-    </div>
-    {{/each}}
-
-
-    <br> {{#credits}} Cast: <span style="font-size:1.4vw">(click someone for more details)</span> <br>
-    <div class="profileList">
-      <ul class="list-inline">
-        {{#each_upto cast 10}}
-        <li class="profileItem">
-          <a class="profile" data-target="#myModal" class="text-center" data-toggle="modal" data-call="c2" onclick="render('{{id}}')">
-            <!-- If/Else to replace missing profile photos -->
-            {{#if profile_path}}
-            <img id="profile" class="text-center" src="http://image.tmdb.org/t/p/w185{{profile_path}}"> {{else}}
-            <img id="profile" src="https://placeholdit.imgix.net/~text?txtsize=20&txtclr=ffffff&bg=9b59b6&txt={{name}}&w=132&h=132&txttrack=2"> {{/if}} <br>
-            <div class="text-center">
-              <b>{{character}}</b> <br> {{name}}
-            </div>
-          </a>
-        </li>
-        {{/each_upto}}
-      </ul>
-    </div>
-    {{/credits}}
-  </script>
-
-  <script id="bioTemplate" type="text/x-handlebars-template">
-    <h4 class="modal-title">{{name}} | <small> aka: {{also_known_as}} </small></h4>
-    </div>
-    <div class="modal-body">
-      <!-- cast profile loaded here -->
-      <div class="col-xs-5">
-        <img id="cast" src="https://image.tmdb.org/t/p/w300_and_h450_bestv2{{profile_path}}">
-      </div>
-      <div class="col-xs-7">
-        {{biography}}
-      </div>
-      <br> {{#credits}}
-      <hr> Known For: <br> {{#each_upto cast 30}}
-      <div class="col-xs-3">
-        <span> Released: {{formatDate release_date "short"}}
->>>>>>> fe268c3dc71a404d5b37bb41b2c562abe2dbdf3a
 		<!-- If/Else to replace missing profile photos -->
 		{{#if poster_path}}
       <img id="poster" src="http://image.tmdb.org/t/p/w150_and_h225_bestv2{{poster_path}}">
@@ -233,7 +151,6 @@ again, not pretty but functional.
 
   </script>
 
-<<<<<<< HEAD
 	<!-- Event Modal -->
 	<div id="myModal" class="modal fade">
 		<div class="modal-dialog">
@@ -333,36 +250,6 @@ again, not pretty but functional.
 
 
 	<script src="js/view.js"></script>
-=======
-  <!-- Event Modal -->
-  <div id="myModal" class="modal fade">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-          <!-- Title and opening body tag are in Handlebars 's2Template' -->
-          <!-- cast profile loaded here -->
-          <div id="castBio"></div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        </div>
-
-      </div>
-      <!-- /.modal-content -->
-    </div>
-    <!-- /.modal-dialog -->
-  </div>
-  <!-- Event modal -->
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
-  <script src='https://momentjs.com/downloads/moment.js'></script>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'></script>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js'></script>
-
-
-
-  <script src="js/view.js"></script>
->>>>>>> fe268c3dc71a404d5b37bb41b2c562abe2dbdf3a
 
 
 
