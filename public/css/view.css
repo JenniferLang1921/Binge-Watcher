@@ -14,27 +14,27 @@ body {
 	text-align: center;
 }
 img#mainPoster {
-	width: 36vw;
+
 }
 img#poster {
 }
 img#backdrop {
-	width: 55vw;
+
 }
 #profile {
 /*	border-radius: 1em;*/
 }
 .profile {
-	min-height: 20vh;
+
 }
 .profile img {
-	width: 20vw;
+
 	margin-bottom: .2em;
 }
 .profileList {
   overflow-x: scroll;
-  overflow-y: hidden;
-  height: 60%px;
+  overflow-y: visible;
+  height: auto;
   width: 100%;
   padding: .3em .6em;
   border: 1px solid black;
@@ -48,6 +48,10 @@ img#backdrop {
 .profileList .list-inline {
   white-space: nowrap;
 }
+
+.text-center {
+    text-align: center;
+    font-size: 12px;
 
 
 
@@ -64,7 +68,7 @@ img#backdrop {
   float:left;
 }
 
-/* :not(:checked) is a filter, so that browsers that don’t support :checked don’t 
+/* :not(:checked) is a filter, so that browsers that don’t support :checked don’t
  follow these rules. Every browser that supports :checked also supports :not(), so
  it doesn’t make the test unnecessarily selective */
 .rating:not(:checked) > input {
@@ -116,6 +120,3 @@ img#backdrop {
   left:2px;
 }
 /* star rating css credit to http://lea.verou.me/2011/08/accessible-star-rating-widget-with-pure-css/  */
-
-
-

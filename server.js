@@ -24,7 +24,7 @@ var express    = require('express')
     app.set('views', './views')
     app.engine('hbs', exphbs({extname: '.hbs'}));
     app.set('view engine', '.hbs');
-    
+
 
     app.get('/', function(req, res){
 	  res.send('Welcome!');
@@ -60,6 +60,3 @@ var express    = require('express')
         console.log("App listening on PORT " + PORT);
 
 	});
-
-
-

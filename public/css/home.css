@@ -12,7 +12,6 @@
 body {
   background: #fafafa;
   padding-bottom: 5em;
-  overflow: hidden;
   height: 1200px;
 }
 
@@ -217,7 +216,7 @@ header nav a:hover, aside a:hover {
 
 /* The Overlay (background) */
 .overlay {
-  /* Height & width depends on how you want to reveal the overlay (see JS below) */    
+  /* Height & width depends on how you want to reveal the overlay (see JS below) */
   height: 100%;
   width: 0;
   position: fixed; /* Stay in place */
@@ -261,6 +260,53 @@ header nav a:hover, aside a:hover {
   right: 45px;
   font-size: 60px;
   color: #ffffff;
+}
+
+
+
+section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.movie {
+  display: inline-block;
+  width: 17%;
+  margin-bottom: 1em;
+
+  &:nth-child(5n+1) {
+    margin-left: 0;
+  }
+}
+
+.poster {
+  width: 100%;
+  cursor: pointer;
+}
+
+
+
+button {
+  height: 40px;
+  width: 200px;
+  margin-top: 0px;
+  margin-right: auto;
+  margin-left: auto;
+  clear: both;
+  cursor: pointer;
+  background-color: #507FA3;
+  border: 1px solid #507FA3;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: all .3s;
+
+  .no-touch &:hover {
+    background-color: #fff;
+    color: #507FA3;
+  }
 }
 
 
