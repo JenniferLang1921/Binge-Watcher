@@ -13,7 +13,13 @@ body {
 	font-weight: 700;
 	text-align: center;
 }
+
+.summary{
+
+}
 img#mainPoster {
+  float: right;
+  height: 400px;
 
 }
 img#poster {

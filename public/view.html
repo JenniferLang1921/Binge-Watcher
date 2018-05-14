@@ -16,11 +16,11 @@
 <body>
 
 	<div class="container-fluid">
-		<div class="row">
+
 			<div id="main" class="col-xs-12">
 
 			</div>
-		</div>
+
 	</div>
 
 	<script id="simple-template" type="text/x-handlebars-template">
@@ -40,29 +40,23 @@
 			</div>
 		</div>
 
-		<div class="row">
+
 			<div class="col-xs-4">
 				<img id="mainPoster" src="http://image.tmdb.org/t/p/w342{{poster_path}}">
 			</div>
-			<div class="col-xs-8">
-				<img id="backdrop" src="http://image.tmdb.org/t/p/w342{{backdrop_path}}" </div>
-
-
-
-
 				<div class="row">
 
-					<div class="pull-right">
+					<div class="rr">
 						Rating: {{vote_average}} / 10 <br> Released: {{formatDate release_date "long"}}
 					</div>
-				</div>
+					<div class="summary" style="
+				font-size: 16px;">
+						"{{overview}}"
+					</div>
+		
 				<br><br>
 			</div>
 
-			<div class="col-xs-8" style="
-    font-size: 16px;">
-				"{{overview}}"
-			</div>
 		</div>
 
 		<br> Trailer(s): {{#each videos}}
