@@ -8,35 +8,33 @@ body {
 }
 
 .title {
-	font-size: 16vw;
-	line-height: 1.2em;
-	font-weight: 700;
-	text-align: center;
+  font-size: 16vw;
+  line-height: 1.2em;
+  font-weight: 700;
+  text-align: center;
 }
 
-.summary{
+.summary {}
 
-}
 img#mainPoster {
   float: right;
   height: 400px;
+}
 
-}
-img#poster {
-}
-img#backdrop {
+img#poster {}
 
-}
+img#backdrop {}
+
 #profile {
-/*	border-radius: 1em;*/
+  /*	border-radius: 1em;*/
 }
-.profile {
 
-}
+.profile {}
+
 .profile img {
-
-	margin-bottom: .2em;
+  margin-bottom: .2em;
 }
+
 .profileList {
   overflow-x: scroll;
   overflow-y: visible;
@@ -56,73 +54,57 @@ img#backdrop {
 }
 
 .text-center {
-    text-align: center;
-    font-size: 12px;
-
-
-
-.modal-dialog {
-  width: 90vw;
-}
-.modal-body {
-  max-height: 70vh;
-  overflow-y: scroll;
-}
-
-/*comment form style*/
-.rating {
-  float:left;
-}
-
-/* :not(:checked) is a filter, so that browsers that don’t support :checked don’t
+  text-align: center;
+  font-size: 12px;
+  .modal-dialog {
+    width: 90vw;
+  }
+  .modal-body {
+    max-height: 70vh;
+    overflow-y: scroll;
+  }
+  /*comment form style*/
+  .rating {
+    float: left;
+  }
+  /* :not(:checked) is a filter, so that browsers that don’t support :checked don’t
  follow these rules. Every browser that supports :checked also supports :not(), so
  it doesn’t make the test unnecessarily selective */
-.rating:not(:checked) > input {
-  position:absolute;
-  top:-9999px;
-  clip:rect(0,0,0,0);
-}
-
-.rating:not(:checked) > label {
-  float:right;
-  width:1.25em;
-  padding:0 .1em;
-  overflow:hidden;
-  white-space:nowrap;
-  cursor:pointer;
-  font-size:200%;
-  line-height:1.2;
-  color:#ddd;
-  text-shadow:1px 1px #bbb, 2px 2px #666, .1em .1em .2em rgba(0,0,0,.5);
-}
-
-.rating:not(:checked) > label:before {
-  content: '★ ';
-}
-
-.rating > input:checked ~ label {
-  color: #f70;
-  text-shadow:1px 1px #c60, 2px 2px #940, .1em .1em .2em rgba(0,0,0,.5);
-}
-
-.rating:not(:checked) > label:hover,
-.rating:not(:checked) > label:hover ~ label {
-  color: gold;
-  text-shadow:1px 1px goldenrod, 2px 2px #B57340, .1em .1em .2em rgba(0,0,0,.5);
-}
-
-.rating > input:checked + label:hover,
-.rating > input:checked + label:hover ~ label,
-.rating > input:checked ~ label:hover,
-.rating > input:checked ~ label:hover ~ label,
-.rating > label:hover ~ input:checked ~ label {
-  color: #ea0;
-  text-shadow:1px 1px goldenrod, 2px 2px #B57340, .1em .1em .2em rgba(0,0,0,.5);
-}
-
-.rating > label:active {
-  position:relative;
-  top:2px;
-  left:2px;
-}
-/* star rating css credit to http://lea.verou.me/2011/08/accessible-star-rating-widget-with-pure-css/  */
+  .rating:not(:checked)>input {
+    position: absolute;
+    top: -9999px;
+    clip: rect(0, 0, 0, 0);
+  }
+  .rating:not(:checked)>label {
+    float: right;
+    width: 1.25em;
+    padding: 0 .1em;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: pointer;
+    font-size: 200%;
+    line-height: 1.2;
+    color: #ddd;
+    text-shadow: 1px 1px #bbb, 2px 2px #666, .1em .1em .2em rgba(0, 0, 0, .5);
+  }
+  .rating:not(:checked)>label:before {
+    content: '★ ';
+  }
+  .rating>input:checked~label {
+    color: #f70;
+    text-shadow: 1px 1px #c60, 2px 2px #940, .1em .1em .2em rgba(0, 0, 0, .5);
+  }
+  .rating:not(:checked)>label:hover, .rating:not(:checked)>label:hover~label {
+    color: gold;
+    text-shadow: 1px 1px goldenrod, 2px 2px #B57340, .1em .1em .2em rgba(0, 0, 0, .5);
+  }
+  .rating>input:checked+label:hover, .rating>input:checked+label:hover~label, .rating>input:checked~label:hover, .rating>input:checked~label:hover~label, .rating>label:hover~input:checked~label {
+    color: #ea0;
+    text-shadow: 1px 1px goldenrod, 2px 2px #B57340, .1em .1em .2em rgba(0, 0, 0, .5);
+  }
+  .rating>label:active {
+    position: relative;
+    top: 2px;
+    left: 2px;
+  }
+  /* star rating css credit to http://lea.verou.me/2011/08/accessible-star-rating-widget-with-pure-css/  */
