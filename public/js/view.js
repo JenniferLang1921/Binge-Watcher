@@ -3,7 +3,8 @@ function getMovie() {
   // $.ajaxSetup({ cache: false });
   // Alien 1979 - ID: 348
   // Deadpool 2016 - ID: 293660
-  $.getJSON("https://api.themoviedb.org/3/movie/348?api_key=94a2f36cd4e27626b6a7a07766a76196&append_to_response=credits,person,videos",
+  var ID = 293660;
+  $.getJSON("https://api.themoviedb.org/3/movie/" + ID + "?api_key=94a2f36cd4e27626b6a7a07766a76196&append_to_response=credits,person,videos",
       // $.getJSON("https://api.themoviedb.org/3/movie/293660?api_key=94a2f36cd4e27626b6a7a07766a76196&append_to_response=keywords,credits,person,images,videos",
       function(data, status) {
 
@@ -76,7 +77,6 @@ function getMovie() {
     })
 
 };
-// uncomment below to create a run function
 getMovie()
 
 // Perform other work here ...
