@@ -9,7 +9,7 @@ function closeNav() {
 }
 
 // ----- Access The Movie Database API and inject HTML with popular titles ----- //
-var start = 0;
+/*var start = 0;
 
 function popularMovies(dataID) {
   var apiKey = '62acdddbaf7040fc6585e01ab2084159',
@@ -36,17 +36,14 @@ function popularMovies(dataID) {
   });
 
 } // End apiCall function folowed by a call
-popularMovies();
+popularMovies();*/
 
 
 //API call for a single movie details
+// Alien 1979 - ID: 348
+// Deadpool 2016 - ID: 293660
+//!!! Get user input for Var ID, in order to search movie DB for title.
 function getMovie() {
-  // Alien 1979 - ID: 348
-  // Deadpool 2016 - ID: 293660
-
-
-  //!!! Get user input for Var ID, in order to search movie DB for title.
-
 
   var ID = 293660;
   $.getJSON("https://api.themoviedb.org/3/movie/" + ID + "?api_key=94a2f36cd4e27626b6a7a07766a76196&append_to_response=credits,person,videos",
@@ -121,3 +118,45 @@ var scroll = new Scroll(document.body);
 scroll.to(0, 1200).then(function() {
   //scrolling down 500 pixels has completed!
 });
+
+
+$('#search').click(function() {
+  var input = $('#search-input').val(),
+    movieName = encodeURI(input);
+    console.log("Searched for: " + movieName);
+});
+  /*  var url = 'https://api.themoviedb.org/3/search/movie?api_key=' + apiKey + '&query=' + movieName;
+		console.log(url);
+
+   $.getJSON(url, function (json) {
+		  var movieID =  json.results[0].id ;
+	console.log("movie ID: " + movieID);
+			//var imageUrl = 'http://image.tmdb.org/t/p/w154';
+			// videoUrl allows access to YouTube videos @ "videos": { "results": [ ] ...
+			var videoUrl = 'https://api.themoviedb.org/3/movie/' + movieID + '?api_key=' + apiKey + '&append_to_response=alternative_titles,credits,similar,videos';
+
+        $.getJSON(videoUrl, function (data) {
+		console.log(data);
+						var cast = data.credits.cast;
+						var youTube = "https://www.youtube.com/embed/";
+						var tr;
+							tr = $('<tr/>');
+							tr.append("<td>" + data.title + "</td>");
+							tr.append("<td><img src=" + imagePath + posterSize + data.poster_path + "></td>");
+        			tr.append("<td>" + data.release_date.substr(0, 4) + "</td>");
+							tr.append("<td><img src=" + imagePath + posterSize + data.backdrop_path + "></td>");
+        			tr.append("<td style='min-width:200px;'>" + data.overview + "</td>");
+							tr.append("<td style='min-width:200px;'><div class='embed-responsive embed-responsive-16by9'><iframe class='embed-responsive-item' src=" + youTube + data.videos.results[0].key + "?html5=1' frameborder='0'></iframe></div></td>");
+
+					cast.forEach(function(profile) {
+		console.log(profile);
+						tr.append("<td>" + profile.character + "<img src=" + imagePath + posterSize + profile.profile_path + ">" + profile.name + "</td>");
+						});
+
+        			$('#imdb').append(tr);
+        });
+				})
+	})
+	$('#clear').click(function() {
+		$("#tbodyid").empty();
+	});*/
