@@ -1,15 +1,58 @@
+//Watchlist Nav opening
+/* Open when someone clicks on the span element */
+function openNav() {
+  document.getElementById("myNav").style.width = "100%";
+}
+/* Close when someone clicks on the "x" symbol inside the overlay */
+function closeNav() {
+  document.getElementById("myNav").style.width = "0%";
+}
+
+// ----- Access The Movie Database API and inject HTML with popular titles ----- //
+var start = 0;
+
+function apiCall(dataID) {
+  var apiKey = '62acdddbaf7040fc6585e01ab2084159',
+    imageUrl = 'https://image.tmdb.org/t/p/w500/',
+    end = start + 15;
+  $.ajax({
+    type: 'GET',
+    url: 'https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=' + apiKey,
+    dataType: 'jsonp',
+    success: function(data) {
+      $.each(data.results, function(i, el) {
+        var poster = el.poster_path;
+
+        if (!dataID && (i > start && i <= end)) {
+          $('<div class="movie" onclick="apiCall(' + el.id + ')" data-id="' + el.id + '"><img class="poster" src="' + imageUrl + el.poster_path + '"/></div>').appendTo('section');
+
+        }
+      });
+
+    },
+    error: function() {
+      console.log('The ajax call to the JSON file has failed');
+    }
+  });
+
+} // End apiCall function folowed by a call
+apiCall();
+
+
+//API call for a single movie details
 function getMovie() {
-  // Don't cache data when using SetTimeout
-  // $.ajaxSetup({ cache: false });
   // Alien 1979 - ID: 348
   // Deadpool 2016 - ID: 293660
+
+
+  //!!! Get user input for Var ID, in order to search movie DB for title.
+
+
   var ID = 293660;
   $.getJSON("https://api.themoviedb.org/3/movie/" + ID + "?api_key=94a2f36cd4e27626b6a7a07766a76196&append_to_response=credits,person,videos",
       // $.getJSON("https://api.themoviedb.org/3/movie/293660?api_key=94a2f36cd4e27626b6a7a07766a76196&append_to_response=keywords,credits,person,images,videos",
       function(data, status) {
-
         console.log(data, status);
-
         // Helper to limit Videos and Cast to a 'set' number (see Handlebars template)
         Handlebars.registerHelper('each_upto', function(ary, max, options) {
           if (!ary || ary.length == 0)
@@ -43,44 +86,17 @@ function getMovie() {
       })
     .done(function() {
       console.log(".done");
-
-      /*
-         // refresh function (when workingwith "live" data)
-         setTimeout(function() {
-           console.log('REFRESH DATA');
-           getMovie();
-         }, 60000);	// = 1 minute | 60000 * 5 = 5 minutes
-      */
     })
 
     .fail(function() {
       console.error(".fail");
-      /*
-         var i = 10;
-         var cntDwn = setInterval(function() {
-           if(i==0){
-             getMovie();
-             console.log('ERROR REFRESH');
-             clearInterval(cntDwn);
-           } else {
-             document.getElementById('countdown').innerHTML = i--;
-             //console.log(i--);
-           }
-         }, 1000);
-      */
-
     })
 
     .always(function() {
-      // Stuff to do every single time the script runs
       console.info(".always");
     })
-
 };
 getMovie()
-
-// Perform other work here ...
-
 
 /* Fetching a Cast members detials */
 function render(ID) {
@@ -97,13 +113,11 @@ function render(ID) {
     })
 };
 
-
 $('#myModal').on('hidden.bs.modal', function() {
   $(this).removeData('bs.modal');
 });
 
-
 var scroll = new Scroll(document.body);
-scroll.to(0, 1200).then(function () {
-   //scrolling down 500 pixels has completed!
+scroll.to(0, 1200).then(function() {
+  //scrolling down 500 pixels has completed!
 });
