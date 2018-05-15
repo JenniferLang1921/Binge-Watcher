@@ -11,7 +11,7 @@ function closeNav() {
 // ----- Access The Movie Database API and inject HTML with popular titles ----- //
 var start = 0;
 
-function apiCall(dataID) {
+function popularMovies(dataID) {
   var apiKey = '62acdddbaf7040fc6585e01ab2084159',
     imageUrl = 'https://image.tmdb.org/t/p/w500/',
     end = start + 15;
@@ -24,7 +24,7 @@ function apiCall(dataID) {
         var poster = el.poster_path;
 
         if (!dataID && (i > start && i <= end)) {
-          $('<div class="movie" onclick="apiCall(' + el.id + ')" data-id="' + el.id + '"><img class="poster" src="' + imageUrl + el.poster_path + '"/></div>').appendTo('section');
+          $('<div class="movie" onclick="popularMovies(' + el.id + ')" data-id="' + el.id + '"><img class="poster" src="' + imageUrl + el.poster_path + '"/></div>').appendTo('section');
 
         }
       });
@@ -36,7 +36,7 @@ function apiCall(dataID) {
   });
 
 } // End apiCall function folowed by a call
-apiCall();
+popularMovies();
 
 
 //API call for a single movie details
