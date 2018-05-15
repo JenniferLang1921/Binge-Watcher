@@ -14,7 +14,9 @@ body {
   text-align: center;
 }
 
-.summary {}
+.summary {
+  padding-right: 300px;
+}
 
 img#mainPoster {
   float: right;
