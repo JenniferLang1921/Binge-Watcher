@@ -21,6 +21,11 @@ var express    = require('express')
 
 
      //For Handlebars
+
+     app.engine("hbs", exphbs({ defaultLayout: "main"}));
+     app.set("view engine", "hbs");
+
+
     app.set('views', './views')
     app.engine('hbs', exphbs({extname: '.hbs'}));
     app.set('view engine', '.hbs');
