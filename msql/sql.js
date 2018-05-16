@@ -9,8 +9,8 @@ var connection = mysql.createConnection({
     user: "root",
 
     // Your password
-    password: "",
-    database: "binge"
+    password: "yourpassword",
+    database: "bingeDB"
 });
 
 connection.connect(function (err) {

@@ -2,20 +2,20 @@
 
   "development": {
       "username": "root",
-      "password": "",
+      "password": "yourpassword",
       "database": "bingeDB",
       "host": "127.0.0.1",
       "dialect": "mysql"
   },
   "test": {
-      "username": "",
+      "username": "root",
       "password": null,
       "database": "",
       "host": "",
       "dialect": "mysql"
   },
   "production": {
-      "username": "",
+      "username": "root",
       "password": null,
       "database": "",
       "host": "127.0.0.1",
