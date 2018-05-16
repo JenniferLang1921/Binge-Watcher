@@ -1,14 +1,141 @@
-<!DOCTYPE html>
-<html>
- 
-<head>
-    <title>Binge-Watcher</title>
-</head>
- 
-<body>
-    <h2>Dashboard</h2>
-    <h5>Welcome back!</h5>
- 
-</body>
- 
-</html>
+<div class="grid">
+  <header>
+    <nav class="flex">
+      <div class="nav_section">
+        <ul class="flex">
+          <li class="logo flex">BW</li>
+          <li class="flex">
+            <a href="landing.html">Home</a>
+          </li>
+        </ul>
+      </div>
+      <div class="nav_user">
+        <ul class="flex">
+          <li class="flex">Welcome: homer</li>
+          <li class="flex">
+   <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                            Launch demo modal
+                        </button>   </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <aside class="aside">
+    <h3>🏠 Dashboard</h3>
+    <ul>
+      <li>
+        <span class="title">🎬 Movies</span>
+        <ul>
+          <li>
+            <a class="active" href="#">Search</a>
+          </li>
+          <li>
+            <a href="#">Add</a>
+          </li>
+          <li>
+            <a href="#">Edit</a>
+          </li>
+          <li>
+            <a href="view.html">Go Deadpool</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span class="title">🙋 Member</span>
+        <ul>
+          <li>
+            <a href="#">Search</a>
+          </li>
+
+
+          <!-- The overlay -->
+          <div id="myNav" class="overlay">
+
+            <!-- Button to close the overlay navigation -->
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+            <!-- Overlay content -->
+            <div>
+              <h1 class="text">Watch List</h1>
+
+            </div>
+
+          </div>
+
+          <!-- Use any element to open/show the overlay navigation menu -->
+          <li>
+            <a href="#">
+            <span onmouseover="openNav()">Watch List</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#">Update</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span class="title">🤘 Streaming Services</span>
+        <ul>
+          <li>
+            <a href="#">Netflix</a>
+          </li>
+          <li>
+            <a href="#">Hulu</a>
+          </li>
+          <li>
+            <a href="#">Amazon Prime</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </aside>
+  <section class="heading">
+    <h2>Movie Search</h2>
+    <div class="search">
+      <div class="search_box">
+        <input type="text" placeholder="Binge It!" name="search">
+      </div>
+    </div>
+
+  </section>
+
+
+</div>
+
+
+
+
+
+<!-- Modal -->
+
+<!-- Sign In-->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="signup" name="signup" method="post" action="/signup">
+                    <label for="email">Email Address</label>
+                    <input class="text" name="email" type="email" />
+                    <label for="firstname">Firstname</label>
+                    <input name="firstname" type="text" />
+                    <label for="lastname">Lastname</label>
+                    <input name="lastname" type="text" />
+                    <label for="password">Password</label>
+                    <input name="password" type="password" />
+                    <input class="btn" type="submit" value="Sign Up" />
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>

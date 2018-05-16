@@ -4,12 +4,6 @@ $(document).ready(function() {
 	}, 100)
 
 
-
-
-
-
-
-
 	var move = anime({
 		targets: ['.I', '.G'],
 		color: ['#27F40B', '#0BF4DB', '#D10BF4', '#FFFFFF', '#27F40B', '#D10BF4'],
