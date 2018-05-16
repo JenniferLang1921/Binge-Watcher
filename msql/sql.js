@@ -9,7 +9,7 @@ var connection = mysql.createConnection({
     user: "root",
 
     // Your password
-    password: "",
+    password: "1234",
     database: "binge"
 });
 
@@ -17,45 +17,27 @@ connection.connect(function (err) {
     if (err) throw err;
     runSearch();
 });
-
-function runSearch() {
+function songSearch() {
     inquirer
-        .prompt({
-            name: "action",
-            type: "rawlist",
-            message: "What would you like to do?",
-            choices: [
-                "Search for a movie",
-            ]
-        })
-        .then(function (answer) {
-            switch (answer.action) {
-                case "Search for a specific movie":
-                    movieSearch();
-                    break;
-            }
+      .prompt({
+        name: "song",
+        type: "input",
+        message: "What song would you like to look for?"
+      })
+      .then(function(answer) {
+        console.log(answer.song);
+        connection.query("SELECT * FROM top5000 WHERE ?", { song: answer.song }, function(err, res) {
+          console.log(
+            "Position: " +
+              res[0].position +
+              " || Song: " +
+              res[0].song +
+              " || Artist: " +
+              res[0].artist +
+              " || Year: " +
+              res[0].year
+          );
+          runSearch();
         });
-}
-
-function movieSearch() {
-    inquirer
-        .prompt({
-            name: "movie",
-            type: "input",
-            message: "What movie would you like see?"
-        })
-        .then(function (answer) {
-            console.log(answer.movie);
-            connection.query("SELECT * FROM items WHERE ?", { movie: answer.movie }, function (err, res) {
-                console.log(
-                    " || Movie: " +
-                    res[0].movie_name +
-                    " || Year: " +
-                    res[0].movie_year +
-                    " || Year: " +
-                    res[0].movie_streaming
-                );
-                runSearch();
-            });
-        });
-}
+      });
+  }
