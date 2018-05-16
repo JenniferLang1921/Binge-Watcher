@@ -95,7 +95,7 @@ function getMovie() {
 };
 getMovie()
 
-/* Fetching a Cast members detials */
+/* Fetching a Cast members details */
 function render(ID) {
   console.log(ID);
   $.getJSON('https://api.themoviedb.org/3/person/' + ID + '?api_key=94a2f36cd4e27626b6a7a07766a76196&language=en-US&append_to_response=credits',
@@ -159,4 +159,14 @@ $('#search').click(function() {
 	})
 	$('#clear').click(function() {
 		$("#tbodyid").empty();
-	});*/
+  });*/
+  
+
+  Handlebars.registerHelper("makeLink", function(text, url) {
+    text = Handlebars.Utils.escapeExpression(text);
+    url = Handlebars.Utils.escapeExpression(url);
+    var theLink = '<a href="' + url + '">' + text + '</a>';
+  
+    return new Handlebars.SafeString(theLink);
+    
+  });
