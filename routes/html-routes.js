@@ -10,6 +10,6 @@ module.exports = function(app) {
 
   // index route loads the landing page
   app.get("/", function(req, res) {
-    res.render('../views/home');
+    res.render('../../views/home');
   });
 };
