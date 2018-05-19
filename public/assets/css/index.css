@@ -15,7 +15,7 @@ body {
 }
 
 .navbar-brand {
-	color: black;
+	color: #1E2B37 !important;
 }
 
 
@@ -26,3 +26,4 @@ body {
 	font-weight: 900;
 	font-size: 36px;
 }
+
