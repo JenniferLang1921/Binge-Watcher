@@ -18,25 +18,6 @@ connection.connect(function (err) {
     movieSearch();
 });
 
-// function runSearch() {
-//     inquirer
-//         .prompt({
-//             name: "action",
-//             type: "rawlist",
-//             message: "What would you like to do?",
-//             choices: [
-//                 "Search for a movie",
-//             ]
-//         })
-//         .then(function (answer) {
-//             switch (answer.action) {
-//                 case "Search for a specific movie":
-//                     movieSearch();
-//                     break;
-//             }
-//         });
-// }
-
 function movieSearch() {
     inquirer
         .prompt({
@@ -60,7 +41,7 @@ function movieSearch() {
                         res[0].movie_name +
                         " || Year: " +
                         res[0].movie_year +
-                        " || Year: " +
+                        " || Streaming Service: " +
                         res[0].movie_streaming
                     );
                 }
