@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Databaaaaaase</title>
+  <link rel="icon" href="./img/bwicon.png" type="image/gif" sizes="16x16">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/home.css">
+
+
+</head>
+
+<body>
+
+  <div class="grid">
+    <header>
+      <nav class="flex">
+        <div class="nav_section">
+          <ul class="flex">
+            <li class="logo flex">BW</li>
+            <li class="flex">
+              <a href="landing.html">Home</a>
+            </li>
+          </ul>
+        </div>
+        <div class="nav_user">
+          <ul class="flex">
+            <li class="flex">Welcome: homer</li>
+            <li class="flex">
+              <a href="/signin">Log out 👋</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <aside class="aside">
+      <h3>🏠 Dashboard</h3>
+      <ul>
+        <li>
+          <span class="title">🎬 Movies</span>
+          <ul>
+            <li>
+              <a class="active" href="#">Search</a>
+            </li>
+            <li>
+              <a href="#">Add</a>
+            </li>
+            <li>
+              <a href="#">Edit</a>
+            </li>
+            <li>
+              <a href="view.html">Go Deadpool</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <span class="title">🙋 Member</span>
+          <ul>
+            <li>
+              <a href="#">Search</a>
+            </li>
+
+
+            <!-- The overlay -->
+            <div id="myNav" class="overlay">
+
+              <!-- Button to close the overlay navigation -->
+              <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+              <!-- Overlay content -->
+              <div>
+                <h1 class="text">Watch List</h1>
+
+              </div>
+
+            </div>
+
+            <!-- Use any element to open/show the overlay navigation menu -->
+            <li>
+              <a href="#">
+              <span onmouseover="openNav()">Watch List</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#">Update</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <span class="title">🤘 Streaming Services</span>
+          <ul>
+            <li>
+              <a href="#">Netflix</a>
+            </li>
+            <li>
+              <a href="#">Hulu</a>
+            </li>
+            <li>
+              <a href="#">Amazon Prime</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </aside>
+    <section class="heading">
+      <h2>Movie Search</h2>
+      <div class="search">
+        <input type="text" id="search-input" class="form-control" placeholder="Movie Title...">
+				<span class="input-group-btn">
+					<button id="search" class="btn btn-secondary btn-success" type="button">SEARCH</button>
+				</span>
+      </div>
+
+    </section>
+
+    <section></section>
+
+</body>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+<script src="js/logic.js"></script>
+
+</html>

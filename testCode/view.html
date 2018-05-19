@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Movie View</title>
+
+
+	<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+
+	<link rel="stylesheet" href="css/view.css">
+
+
+</head>
+
+<body>
+
+	<div class="container-fluid">
+
+		<div id="main" class="col-xs-12">
+
+		</div>
+
+	</div>
+
+	<script id="simple-template" type="text/x-handlebars-template">
+		<div class="col-xs-12">
+			<div class="title">
+				{{title}}
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-xs-12" style="
+    text-align: center;">
+				{{#each genres}}
+				<span class="label label-default">
+				{{name}}
+			</span> {{/each}}
+			</div>
+		</div>
+
+
+		<div class="col-xs-4">
+			<img id="mainPoster" src="http://image.tmdb.org/t/p/w342{{poster_path}}">
+		</div>
+		<div class="row">
+
+			<div class="rr">
+				Rating: {{vote_average}} / 10 <br> Released: {{formatDate release_date "long"}}
+			</div>
+			<div class="summary" style="
+				font-size: 16px;">
+				"{{overview}}"
+			</div>
+
+			<br><br>
+		</div>
+
+		</div>
+
+		<br> Trailer(s): {{#each videos}}
+		<div class="row">
+			{{#each_upto this 2}}
+			<div class="col-xs-6">
+				<span class='embed-responsive embed-responsive-16by9'>
+			<iframe class='embed-responsive-item' src="https://www.youtube.com/embed/{{key}}"?html5=1&iv_load_policy=3' frameborder='0'></iframe>
+		</span>
+			</div>
+			{{/each_upto}}
+		</div>
+		{{/each}}
+
+
+		<br> {{#credits}} Cast: <span>(click someone for more details)</span> <br>
+		<div class="profileList">
+			<ul class="list-inline">
+				{{#each_upto cast 10}}
+				<li class="profileItem">
+					<a class="profile" data-target="#myModal" class="text-center" data-toggle="modal" data-call="c2" onclick="render('{{id}}')">
+						<!-- If/Else to replace missing profile photos -->
+						{{#if profile_path}}
+						<img id="profile" class="text-center" src="http://image.tmdb.org/t/p/w185{{profile_path}}"> {{else}}
+						<img id="profile" src="https://placeholdit.imgix.net/~text?txtsize=20&txtclr=ffffff&bg=9b59b6&txt={{name}}&w=132&h=132&txttrack=2"> {{/if}} <br>
+						<div class="text-center">
+							<b>{{character}}</b> <br> {{name}}
+						</div>
+					</a>
+				</li>
+				{{/each_upto}}
+			</ul>
+		</div>
+		{{/credits}}
+	</script>
+
+	<script id="bioTemplate" type="text/x-handlebars-template">
+		<h4 class="modal-title">{{name}} | <small> aka: {{also_known_as}} </small></h4>
+		</div>
+		<div class="modal-body">
+			<!-- cast profile loaded here -->
+			<div class="col-xs-5">
+				<img id="cast" src="https://image.tmdb.org/t/p/w300_and_h450_bestv2{{profile_path}}">
+			</div>
+			<div class="col-xs-7">
+				{{biography}}
+			</div>
+			<br> {{#credits}}
+			<hr> Known For: <br> {{#each_upto cast 30}}
+			<div class="col-xs-3">
+				<span> Released: {{formatDate release_date "short"}}
+		<!-- If/Else to replace missing profile photos -->
+		{{#if poster_path}}
+      <img id="poster" src="http://image.tmdb.org/t/p/w150_and_h225_bestv2{{poster_path}}">
+		{{else}}
+			<img id="poster"  src="https://cdn.amctheatres.com/Media/Default/Images/noposter.jpg">
+		{{/if}} <br>
+			<div class="text-center">
+		<b>{{character}}</b> </div>
+	</span>
+			</div>
+			{{/each_upto}}
+		</div>
+		</div>
+		{{/credits}}
+
+	</script>
+
+	<!-- Event Modal -->
+	<div id="myModal" class="modal fade">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<!-- Title and opening body tag are in Handlebars 's2Template' -->
+					<!-- cast profile loaded here -->
+					<div id="castBio"></div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+
+			</div>
+			<!-- /.modal-content -->
+		</div>
+		<!-- /.modal-dialog -->
+	</div>
+
+	<!--Comment Form-->
+
+
+	<div class="container">
+
+
+		<!--star rating form-->
+
+		<div class="row">
+
+			<fieldset class="rating">
+				<h3>Did you like it?</h3>
+				<input type="radio" id="star5" name="rating" value="5" />
+				<label for="star5" title="Rocks!">5 stars</label>
+				<input type="radio" id="star4" name="rating" value="4" />
+				<label for="star4" title="Pretty good">4 stars</label>
+				<input type="radio" id="star3" name="rating" value="3" />
+				<label for="star3" title="Meh">3 stars</label>
+				<input type="radio" id="star2" name="rating" value="2" />
+				<label for="star2" title="Kinda bad">2 stars</label>
+				<input type="radio" id="star1" name="rating" value="1" />
+				<label for="star1" title="Sucks big time">1 star</label>
+			</fieldset>
+		</div>
+
+		<!--movie review comments input-->
+		<div class="row comments">
+			<div class="form-group ">
+				<label class="control-label " for="textarea">
+					<h3>Leave a Review for This Show!</h3>
+				</label>
+				<textarea class="form-control" cols="40" id="textarea" name="textarea" rows="10"></textarea>
+			</div>
+		</div>
+
+		<div class="row">
+
+			<form method="post">
+				<div class="form-group ">
+					<label class="control-label " for="name">
+						<h3>Your Name</h3>
+					</label>
+					<input class="form-control" id="name" name="name" type="text" />
+				</div>
+			</form>
+
+		</div>
+
+		<!--submit button-->
+
+		<div class="form-group">
+			<button class="btn btn-primary " name="submit" type="submit">
+				Submit
+			</button>
+		</div>
+
+
+		<!--empty div to hold user reviews-->
+		<div class="row" id="pastReviews">
+
+		</div>
+
+	</div>
+
+
+
+
+
+
+
+	<!-- Event modal -->
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+	<script src='https://momentjs.com/downloads/moment.js'></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js'></script>
+
+
+
+	<script src="js/logic.js"></script>
+
+
+
+
+</body>
+
+</html>
