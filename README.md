@@ -52,10 +52,10 @@ Some future additions we are considering are adding a login, adding individual q
 ```
 
 ## Development Process
-```
+
 Here is a link to a google slides presentation that discussed the development process of this project.  
-[https://docs.google.com/presentation/d/1nYtNPi7_6qxOYhU_5_QDkpOhARMhv5o3FXu4iAD0PyI/edit?usp=sharing]
-```
+[Google Slides Presentation](https://docs.google.com/presentation/d/1nYtNPi7_6qxOYhU_5_QDkpOhARMhv5o3FXu4iAD0PyI/edit?usp=sharing)
+
 
 Coded and Designed by Griffin Gaeth, Pat Shehan, and Jennifer Lang
 
