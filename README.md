@@ -37,14 +37,14 @@ The application will now be running locally on PORT, in this case that is port 3
 
 ## Testing
 
-```
+
 To test our website, open the terminal in test.js in the nightmare test folder and then run the command:
 npm run test 
 
 Click on this picture to watch a video of nightmare.js in action on our Bingewatcher website.
 
 [![](https://i.ytimg.com/vi/MGZolXIfeAM/3.jpg?time=1526787151733)](https://youtu.be/MGZolXIfeAM "NightmareJS Test")
-```
+
 ## Future Additions
 
 ```
@@ -54,7 +54,7 @@ Some future additions we are considering are adding a login, adding individual q
 ## Development Process
 ```
 Here is a link to a google slides presentation that discussed the development process of this project.  
-https://docs.google.com/presentation/d/1nYtNPi7_6qxOYhU_5_QDkpOhARMhv5o3FXu4iAD0PyI/edit?usp=sharing
+[https://docs.google.com/presentation/d/1nYtNPi7_6qxOYhU_5_QDkpOhARMhv5o3FXu4iAD0PyI/edit?usp=sharing]
 ```
 
 Coded and Designed by Griffin Gaeth, Pat Shehan, and Jennifer Lang
