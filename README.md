@@ -44,7 +44,8 @@ Click on this picture to watch a video of nightmare.js in action on our Bingewat
 
 [![](https://i.ytimg.com/vi/MGZolXIfeAM/3.jpg?time=1526787151733)](https://youtu.be/MGZolXIfeAM "NightmareJS Test")
 
-##Future Additions
+## Future Additions
+
 Some future additions we are considering are adding a login, adding individual queues for users to store their favorite movies in, and adding a comment section with reviews for the individual movies.
 
 
