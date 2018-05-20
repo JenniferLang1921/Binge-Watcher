@@ -1,14 +1,14 @@
 {
-  "name": "examples",
+  "name": "",
   "version": "1.0.0",
-  "description": "Examples for Nightmare.js.",
-  "main": "index.js",
+  "description": "",
+  "main": "",
   "scripts": {
-    "test": "node example.js"
+    "test": "node test.js"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "nightmare": "^2.5.3"
+    "nightmare": "^2.10.0"
   }
 }
