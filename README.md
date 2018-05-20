@@ -3,7 +3,7 @@
 
 ## Description
 
-Binge-Watcher is a website that allows users to login, and make individual queue's to store their favorite Netflix, Hulu, and Amazon Prime movies and tv shows in.  They may also leave reviews and read reviews about the movies and tv shows written by other users.  
+Binge-Watcher is a website that allows users to search for movies.
 
 Backend Technologies Used:  Node.js, Express, mySQL Database, Sequilize, Authentication with JSON, Express, MVC File Structure, Nightmare Testing, Mocha Testing, 
 
@@ -43,6 +43,9 @@ npm run test
 Click on this picture to watch a video of nightmare.js in action on our Bingewatcher website.
 
 [![](https://i.ytimg.com/vi/MGZolXIfeAM/3.jpg?time=1526787151733)](https://youtu.be/MGZolXIfeAM "NightmareJS Test")
+
+##Future Additions
+Some future additions we are considering are adding a login, adding individual queues for users to store their favorite movies in, and adding a comment section with reviews for the individual movies.
 
 
 Coded and Designed by Griffin Gaeth, Pat Shehan, and Jennifer Lang
