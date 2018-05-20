@@ -11,7 +11,7 @@ Frontend Technologies Used: Javascript, Jquery, Bootstrap, HTMl5, API's,  Anime.
 
 ## Demo
 
- Check out Binge-Watcher at https://XXXXXXXXXXXXXXXXX
+ Check out Binge-Watcher at https://binge-watcher.herokuapp.com/
 
 ## Installation
 
@@ -41,7 +41,8 @@ to test our website, open the terminal in test.js in the nightmare test folder a
 npm run test 
 
 Click on this picture below to watch a video of nightmare.js in action on our Bingewatcher website.
-[![NightmareJS Test](https://i.ytimg.com/vi/MGZolXIfeAM/hqdefault.jpg)](https://www.youtube.com/watch?v=MGZolXIfeAM "NightmareJS Test")
+
+[![](https://i.ytimg.com/vi/MGZolXIfeAM/3.jpg?time=1526787151733)](https://youtu.be/MGZolXIfeAM "NightmareJS Test")
 
 
 Coded and Designed by Griffin Gaeth, Pat Shehan, and Jennifer Lang
