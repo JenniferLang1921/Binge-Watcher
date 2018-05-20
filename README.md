@@ -37,10 +37,10 @@ The application will now be running locally on PORT, in this case that is port 3
 
 ## Testing
 
-to test our website, open the terminal in test.js in the nightmare test folder and then run the command:
+To test our website, open the terminal in test.js in the nightmare test folder and then run the command:
 npm run test 
 
-Click on this picture below to watch a video of nightmare.js in action on our Bingewatcher website.
+Click on this picture to watch a video of nightmare.js in action on our Bingewatcher website.
 
 [![](https://i.ytimg.com/vi/MGZolXIfeAM/3.jpg?time=1526787151733)](https://youtu.be/MGZolXIfeAM "NightmareJS Test")
 
