@@ -12,4 +12,22 @@ module.exports = function(app) {
   app.get("/", function(req, res) {
     res.render('../views/home');
   });
+
+
+app.get("/dashboard", function(req, res) {
+  res.render('../views/dashboard');
+});
+
+
+
+app.get("/login", function(req, res) {
+  res.render('../views/login');
+});
+
+app.get("/favorites", function(req, res) {
+  res.render('../views/favorites');
+});
+
+
 };
+
