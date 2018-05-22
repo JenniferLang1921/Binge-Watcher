@@ -13,7 +13,7 @@ $(document).ready(function() {
     });
   
     var move = anime({
-      targets: '.EE',
+      targets: ['.EE', '.N', '.E'],
       color: ['#27F40B', '#0BF4DB', '#D10BF4', '#FFFFFF', '#27F40B', '#D10BF4'],
       easing: 'linear',
       duration: 500,
