@@ -66,11 +66,11 @@ $(document).ready(function() {
     var CSStransforms = anime({
     targets: '#img',
     	
-    translateY: -170,
-    scale: .5,
-    duration: 2000,
+    translateY: [0, -50, 0],
+    scale: 1,
+    duration: 1000,
     	easing: 'linear',
-    rotate: '2turn',
+    rotate: '1turn',
     });
   
   

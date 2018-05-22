@@ -121,10 +121,10 @@ Description: Define screen-size breakpoints here.
 
 .logo {
   position: absolute;
-  width: 250px;
-  height: 100px;
+  width: 100px;
+  height: 50px;
   align-self: flex-start;
-  margin: 10px;
+  
 }
 
 .title {
@@ -184,7 +184,7 @@ Description: Define screen-size breakpoints here.
   color: rgb(245, 245, 245);
   cursor: pointer;
   text-align: center;
-  background-color: #17A2B8;
+  background-image: linear-gradient(to bottom right, #ff3cac, #562b7c, #2b86c5);
   border-radius: 50px;
   padding: 15px 0 15px 0;
   transition: box-shadow 1s;

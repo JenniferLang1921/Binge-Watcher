@@ -5,6 +5,10 @@ body {
 
 }
 
+.jumbotron {
+	background-color: rgba(255,255,255,.4)!important;
+}
+
 #form {
 	width: 50%;
 	margin-top: 10%;
@@ -12,3 +16,19 @@ body {
 
 
 
+.btn {
+		width: 30%;
+		font-size: 18px;
+		color: rgb(245, 245, 245);
+		cursor: pointer;
+		text-align: center;
+		background-image: linear-gradient(to bottom right, #ff3cac, #562b7c, #2b86c5);
+		border-radius: 50px;
+		padding: 10px 0 10px 0;
+		transition: box-shadow 1s;
+	  
+
+	 
+	}
+
+    

@@ -1,126 +1,85 @@
-
-  <link rel="icon" href="./img/bwicon.png" type="image/gif" sizes="16x16">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <!--<link rel="stylesheet" href="assets/css/dashboard.css">-->
-
+<link rel="icon" href="./img/bwicon.png" type="image/gif" sizes="16x16">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="assets/css/dashboard.css">
 
 
 
-  <div class="grid">
-    <header>
-      <nav class="flex">
-        <div class="nav_section">
-          
-          </ul>
-        </div>
-        <div class="nav_user">
-          <ul class="flex">
-            <li class="flex">Welcome: homer</li>
-            <li class="flex">
-              <a href="/">Log out 👋</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </header>
-    <aside class="aside">
-      <h3>🏠 Dashboard</h3>
-      
-          <span class="title">🙋 Member</span>
-          
+
+  <header>
+    <nav class="flex">
+      <div class="nav_section">
+
+        </ul>
+      </div>
+      <div class="nav_user">
+        <ul class="flex">
+          <li class="flex">🏠 Dashboard</li>
+          <li class="flex">🏠 Welcome: homer</li>
+          <li class="flex">
+            <a href="/">Log out 👋</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
 
 
-            <!-- The overlay -->
-            <div id="myNav" class="overlay">
 
-              <!-- Button to close the overlay navigation -->
-              <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 
-              <!-- Overlay content -->
-              <div>
-                <h1 class="text">Watch List</h1>
 
-              </div>
 
-            </div>
 
-            <!-- Use any element to open/show the overlay navigation menu -->
-            <li>
-              <a href="#">
-              <span onclick="openNav()">Watch List</span>
-              </a>
-            </li>
 
-            <li>
-              <a href="#">Update</a>
-            </li>
-          </ul>
-        </li>
-        <li>
-          <span class="title">🤘 Streaming Services</span>
-          <ul>
-            <li>
-              <a href="#">Netflix</a>
-            </li>
-            <li>
-              <a href="#">Hulu</a>
-            </li>
-            <li>
-              <a href="#">Amazon Prime</a>
-            </li>
-          </ul>
-        </li>
-      </ul>
-    </aside>
-   <!--Search Movies-->
-<div class="overlay">
-  
-  <img class="poster-desc" />
-  <h2 class="title-desc"></h2>
-  <p class="release-date-desc"></p>
-  <p class="desc"></p>
-</div>
-<h1 class="title text-center" style="color:black;">Search For Movies 🎬 </h1>
-<div class="search-block justify-content-center"></div>
-  <input class="search" type="text" placeholder="Type any movie title" name="movie"/>
+  <!--Search Movies-->
+  <div class="overlay">
+
+    <img class="poster-desc" />
+    <h2 class="title-desc"></h2>
+    <p class="release-date-desc"></p>
+    <p class="desc"></p>
+  </div>
+
+
+  <h1 class="title text-center" style="color:black;">Search For Movies 🎬 </h1>
+
+  <div id="movie-search" class="container"> 
+  <div class="search-block justify-content-center"></div>
+  <input class="search" type="text" placeholder="Type any movie title" name="movie" />
   <br/>
   <div class="search-button" href="movieFinder()">Search</div>
 </div>
 <h2 class="no-results"></h2>
 <div class="search-result">
   <div class="movie-block" id="movie-block0">
-    <h2 class="title" id="title0"></h2>
+    <h2 class="movie-name" id="title0"></h2>
     <img class="poster" id="poster0" />
     <p class="description description0"></p>
     <p class="release-date" id="release-date0"></p>
   </div>
   <div class="movie-block" id="movie-block1">
-    <h2 class="title" id="title1"></h2>
+    <h2 class="movie-name" id="title1"></h2>
     <img class="poster" id="poster1" />
     <p class="description description1"></p>
     <p class="release-date" id="release-date1"></p>
   </div>
   <div class="movie-block" id="movie-block2">
-    <h2 class="title" id="title2"></h2>
+    <h2 class="movie-name" id="title2"></h2>
     <img class="poster" id="poster2" />
     <p class="description description2"></p>
     <p class="release-date" id="release-date2"></p>
   </div>
   <div class="movie-block" id="movie-block3">
-    <h2 class="title" id="title3"></h2>
+    <h2 class="movie-name" id="title3"></h2>
     <img class="poster" id="poster3" />
     <p class="description description3"></p>
     <p class="release-date" id="release-date3"></p>
   </div>
-</div>
-</div>
-    </section>
 
-   
+</div> 
+
+
+
 
 
 
 <script src="js/logic.js"></script>
-
-
-
