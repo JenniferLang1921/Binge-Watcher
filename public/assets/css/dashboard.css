@@ -1,7 +1,22 @@
 #movie-search {
-	margin: 0 30% 0 30%;
+	margin: 0 25% 0 25%;
 }
 
 .movie-name {
   color: black;
+}
+
+.navbar {
+
+  background-image: linear-gradient(to bottom right, #ff3cac, #562b7c, #2b86c5); 
+}
+
+#navtitles {
+color: white!important;
+letter-spacing: .08em;
+display: inline-block;
+}
+
+#navtitles:hover {
+  border-bottom: 3px solid rgb(54, 231, 18);
 }

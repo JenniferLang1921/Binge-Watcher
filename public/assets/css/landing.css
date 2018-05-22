@@ -2,16 +2,10 @@ body {
 	background: linear-gradient(to bottom, rgba(0,0,0,0.66) 100%, transparent), url(/assets/img/bricks.png);
 	background-size: cover, cover;
 	background-position: center, center;
-color: #FFF;
+	color: #FFF;
+	font-family: 'Roboto';
 }
 
-#main {
-	height: 50vh;
-	width: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
 
 .navbar-brand {
 	color: black;
@@ -25,7 +19,7 @@ color: #FFF;
 }
 
 #movie-search {
-	margin: 0 30% 0 30%;
+	margin: 0 25% 0 25%;
 }
 
 #img {
