@@ -47,9 +47,9 @@ Click on this picture to watch a video of nightmare.js in action on our Bingewat
 
 ## Future Additions
 
-```
+
 Some future additions we are considering are adding a login, adding individual queues for users to store their favorite movies in, and adding a comment section with reviews for the individual movies.
-```
+
 
 ## Development Process
 
@@ -58,6 +58,8 @@ Here is a link to a google slides presentation that discussed the development pr
 
 
 Coded and Designed by Griffin Gaeth, Pat Shehan, and Jennifer Lang
+
+Thanks to [TMDB](https://www.themoviedb.org/) for use of their API.  
 
 
 

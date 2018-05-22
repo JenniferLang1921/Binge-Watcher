@@ -1,0 +1,14 @@
+body {
+	background: linear-gradient(to bottom, rgba(0,0,0,0.66) 100%, transparent), url(http://tns.thenews.com.pk/wp-content/uploads/2017/11/Farah2.jpg);
+	background-size: cover;
+	background-position: center;
+
+}
+
+#form {
+	width: 50%;
+	margin-top: 10%;
+}
+
+
+

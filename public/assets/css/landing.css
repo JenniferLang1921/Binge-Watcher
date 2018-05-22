@@ -1,13 +1,12 @@
 body {
-	background: #445;
-	color: #FFF;
+	background: linear-gradient(to bottom, rgba(0,0,0,0.66) 100%, transparent), url(/assets/img/bricks.png);
+	background-size: cover, cover;
+	background-position: center, center;
+color: #FFF;
 }
 
 #main {
-	background: linear-gradient(to bottom, rgba(0,0,0,0.66) 100%, transparent), url(http://tns.thenews.com.pk/wp-content/uploads/2017/11/Farah2.jpg);
-	background-size: cover, cover;
-	background-position: center, center;
-	height: 100vh;
+	height: 50vh;
 	width: 100%;
 	display: flex;
 	justify-content: center;
@@ -18,11 +17,17 @@ body {
 	color: black;
 }
 
-
-
 .letters {
 	color: #D10BF4;
 	text-align: center;
 	font-weight: 900;
 	font-size: 36px;
+}
+
+#movie-search {
+	margin: 0 25% 0;
+}
+
+#img {
+	margin: auto;
 }

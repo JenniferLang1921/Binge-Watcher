@@ -22,7 +22,7 @@ body {
 /* #HEADER
 ================================================== */
 
-header {
+/*header {
   background: url(https://i.pinimg.com/originals/e4/5f/54/e45f54e2cc5516e2210c34453db5ab6e.jpg);
   text-align: center;
   padding: 1.5em 1em 1em 1em;
@@ -34,6 +34,7 @@ header #logo a {
   text-transform: uppercase;
   letter-spacing: .05em;
 }
+*/
 
 /* #NAVIGATION
 ================================================== */
@@ -127,7 +128,7 @@ Description: Define screen-size breakpoints here.
 }
 
 .title {
-  color: #232930;
+  color:white;
   margin-top: 2em;
   margin-bottom: 1em;
 }
@@ -151,9 +152,9 @@ Description: Define screen-size breakpoints here.
   appearance: none;
   background-color: none;
   border: 1px solid #232930;
-  line-height: 0;
+  line-height: 40px;
   font-size: 18px;
-  width: 100%;
+  width: 50%;
   display: block;
   box-sizing: border-box;
   padding: 5px 15px;
@@ -178,7 +179,7 @@ Description: Define screen-size breakpoints here.
 }
 
 .search-button {
-  width: 100%;
+  width: 50%;
   font-size: 18px;
   color: rgb(245, 245, 245);
   cursor: pointer;
@@ -194,7 +195,7 @@ Description: Define screen-size breakpoints here.
 }
 
 .search-button:hover {
-  box-shadow: 0 0 5px black;
+  box-shadow: 0 0 5px rgb(4, 62, 95);
 }
 
 .search-result {
@@ -202,6 +203,7 @@ Description: Define screen-size breakpoints here.
   height: 50%;
   display: flex;
   justify-content: space-around;
+  color: white;
 }
 
 .movie-block {
@@ -217,10 +219,12 @@ Description: Define screen-size breakpoints here.
 .poster {
   border-radius: 20px;
   cursor: pointer;
+  color: white;
 }
 
 .description {
   display: none;
+
 }
 
 .release-date {

@@ -63,15 +63,15 @@ $(document).ready(function() {
     });
   
     //logo animation
-    //var CSStransforms = anime({
-    //targets: '.el',
-    //	translateX: 300,
-    //translateY: -100,
-    //scale: .5,
-    //duration: 2000,
-    //	easing: 'linear',
-    //	rotate: '2turn'
-    //});
+    var CSStransforms = anime({
+    targets: '#img',
+    	
+    translateY: -170,
+    scale: .5,
+    duration: 2000,
+    	easing: 'linear',
+    rotate: '2turn',
+    });
   
   
   
