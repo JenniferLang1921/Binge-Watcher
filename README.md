@@ -1,5 +1,6 @@
 # Binge-Watcher
 
+![BingeWatcher](https://github.com/ggaeth/Binge-Watcher/blob/master/public/assets/img/bingewatcher.png)
 
 ## Description
 
@@ -48,7 +49,7 @@ Click on this picture to watch a video of nightmare.js in action on our Bingewat
 ## Future Additions
 
 
-Some future additions we are considering are adding a login, adding individual queues for users to store their favorite movies in, and adding a comment section with reviews for the individual movies.
+Some future additions we are considering are adding login authentication, adding individual queues for users to store their favorite movies in, and adding a comment section with reviews for the individual movies.
 
 
 ## Development Process
