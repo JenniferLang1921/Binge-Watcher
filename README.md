@@ -1,6 +1,9 @@
 # Binge-Watcher
 
-
+<p align="center">
+  <img src="your_relative_path_here" width="350"/>
+  ![Bilby Stampede](https://github.com/ggaeth/Binge-Watcher/public/assets/img/bingewatcher.png)
+</p>
 ## Description
 
 Binge-Watcher is a website that allows users to search for movies.
