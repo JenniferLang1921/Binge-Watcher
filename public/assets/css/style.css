@@ -129,8 +129,16 @@ Description: Define screen-size breakpoints here.
 }
 
 .logo:hover {
-  width: 150px;
-  height: 75px;
+  width: 125px;
+  height: 63px;
+}
+
+#logo2
+{
+  position: absolute;
+  right: 0;
+  top: 0;
+
 }
 
 

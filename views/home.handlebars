@@ -2,7 +2,7 @@
 
 <div id="main" class="is-loading ">
 
-  <div class="container">
+  <div id="animationContainer">
     <div class="row">
 
       <div id="img">
@@ -38,11 +38,8 @@
 
 
 
-
-
-
+<div id="movieContainer">
 <!--Search Movies-->
-
 <div class="overlay">
 
   <img class="poster-desc" />
@@ -50,44 +47,45 @@
   <p class="release-date-desc"></p>
   <p class="desc"></p>
 </div>
-<h1 class="title text-center" style="color:white;">Search For Movies!</h1>
+
+
+<h1 id ="searchTitle" class="text-center" style="color:white;">Search For Movies </h1>
 <div id="movie-search" class="container">
 
   <div class="search-block justify-content-center"></div>
   <input class="search" type="text" placeholder="Type any movie title" name="movie" />
   <br/>
-
-  <!--button-->
-  <div class="search-button" href="movieFinder()" id="button">Search and Scroll Down</div>
+  <div class="search-button" href="movieFinder()">Search</div>
 </div>
 <h2 class="no-results"></h2>
 <div class="search-result">
   <div class="movie-block" id="movie-block0">
-    <h2 class="title" id="title0"></h2>
+    <h2 class="movie-name" id="title0"></h2>
     <img class="poster" id="poster0" />
     <p class="description description0"></p>
     <p class="release-date" id="release-date0"></p>
   </div>
   <div class="movie-block" id="movie-block1">
-    <h2 class="title" id="title1"></h2>
+    <h2 class="movie-name" id="title1"></h2>
     <img class="poster" id="poster1" />
     <p class="description description1"></p>
     <p class="release-date" id="release-date1"></p>
   </div>
   <div class="movie-block" id="movie-block2">
-    <h2 class="title" id="title2"></h2>
+    <h2 class="movie-name" id="title2"></h2>
     <img class="poster" id="poster2" />
     <p class="description description2"></p>
     <p class="release-date" id="release-date2"></p>
   </div>
   <div class="movie-block" id="movie-block3">
-    <h2 class="title" id="title3"></h2>
+    <h2 class="movie-name" id="title3"></h2>
     <img class="poster" id="poster3" />
     <p class="description description3"></p>
     <p class="release-date" id="release-date3"></p>
   </div>
-</div>
 
+</div>
+</div>
 
 
 

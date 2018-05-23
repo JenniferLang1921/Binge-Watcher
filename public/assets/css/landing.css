@@ -1,11 +1,25 @@
 body {
-	background: linear-gradient(to bottom, rgba(0,0,0,0.66) 100%, transparent), url(/assets/img/bricks.png);
-	background-size: cover, cover;
-	background-position: center, center;
-	color: #FFF;
-	font-family: 'Roboto';
+	background-color: black;
+
 }
 
+#animationContainer {
+	background: linear-gradient(to bottom, rgba(0,0,0,0.66) 100%, transparent), url(http://tns.thenews.com.pk/wp-content/uploads/2017/11/Farah2.jpg);
+	background-size: cover, cover;
+	background-position: center, center;
+	height: 100vh;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+		
+}
+
+#movieContainer {
+	height: 125vh;
+	width: 100%;
+	background-color: black;
+	margin-top: 10%;
+}
 
 .navbar-brand {
 	color: black;
@@ -15,13 +29,13 @@ body {
 	color: #D10BF4;
 	text-align: center;
 	font-weight: 900;
-	font-size: 36px;
+	font-size: 8vw;
 }
 
-#movie-search {
-	margin: 0 25% 0 25%;
+#movie-search  {
+	margin: 0 30% 0 30%;
 }
 
 #img {
-	margin: auto;
+	margin: 5% auto 0;
 }

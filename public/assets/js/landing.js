@@ -78,29 +78,26 @@ $(document).ready(function() {
   
     //animate size
     $('.letters').animate({
-      fontSize: '24px'
+      fontSize: '8pvw'
     }, 'slow');
   
     $('.letters').animate({
-      fontSize: '36px'
+      fontSize: '10vw'
     }, 'slow');
   
     $('.letters').animate({
-      fontSize: '24px'
+      fontSize: '8vw'
     }, 'slow');
   
     $('.letters').animate({
-      fontSize: '36px'
+      fontSize: '10vw'
     }, 'slow');
   
     $('.letters').animate({
-      fontSize: '24px'
+      fontSize: '8vw'
     }, 'slow');
   
-    $('.letters').animate({
-      fontSize: '36px'
-    }, 'slow');
-  
+    
   
   
   
