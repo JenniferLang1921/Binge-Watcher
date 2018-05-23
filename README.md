@@ -1,11 +1,7 @@
 # Binge-Watcher
 
-<p align="center">
-  <img src="https://github.com/ggaeth/Binge-Watcher/blob/master/public/assets/img/bingewatcher.png" width="350"/>
-  
-</p>
-
 ![BingeWatcher](https://github.com/ggaeth/Binge-Watcher/blob/master/public/assets/img/bingewatcher.png)
+
 ## Description
 
 Binge-Watcher is a website that allows users to search for movies.
